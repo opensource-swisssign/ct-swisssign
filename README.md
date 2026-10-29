@@ -20,10 +20,7 @@ Shards are served under `ct.swisssign.com` and split into half-year intervals.
 
 Eiger accepts all roots from the CCADB repository with the Server Authentication (TLS) key usage.
 
-In addition to the CCADB roots, Eiger also accepts the following roots:
-
-- Google's Merge Delay Monitor Root
-- SwissSign's Merge Delay Monitor Root
+In addition to the CCADB entries, Eiger also accepts additional roots available in [`additional_roots`](./eiger/additional_roots) folder.
 
 #### Active Shards
 
