@@ -18,7 +18,7 @@ Shards are served under `ct.swisssign.com` and split into half-year intervals.
 
 #### Accepted Roots
 
-Eiger accepts all roots from the CCADB repository with the Server Authentication (TLS) key usage and trusted at least by Apple, Google Chrome, Microsoft or Mozilla.
+Eiger accepts all roots from the CCADB repository with the Server Authentication (TLS) key usage.
 
 In addition to the CCADB roots, Eiger also accepts the following roots:
 
