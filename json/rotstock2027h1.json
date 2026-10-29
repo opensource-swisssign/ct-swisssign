@@ -26,20 +26,10 @@
     }
   ],
   "submission_endpoint": {
-    "url": "https://log.rotstock2027h1.pre.ct.swisssign.com/",
-    "rate_limit": {
-      "requests": 750,
-      "interval_seconds": 60,
-      "scope": "ip"
-    }
+    "url": "https://log.rotstock2027h1.pre.ct.swisssign.com/"
   },
   "monitoring_endpoint": {
-    "url": "https://mon.rotstock2027h1.pre.ct.swisssign.com/",
-    "rate_limit": {
-      "requests": 60,
-      "interval_seconds": 60,
-      "scope": "ip"
-    }
+    "url": "https://mon.rotstock2027h1.pre.ct.swisssign.com/"
   },
   "log_software": {
     "name": "TesseraCT",

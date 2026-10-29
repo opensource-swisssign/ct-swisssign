@@ -26,20 +26,10 @@
     }
   ],
   "submission_endpoint": {
-    "url": "https://log.eiger2028h2.ct.swisssign.com/",
-    "rate_limit": {
-      "requests": 750,
-      "interval_seconds": 60,
-      "scope": "ip"
-    }
+    "url": "https://log.eiger2028h2.ct.swisssign.com/"
   },
   "monitoring_endpoint": {
-    "url": "https://mon.eiger2028h2.ct.swisssign.com/",
-    "rate_limit": {
-      "requests": 60,
-      "interval_seconds": 60,
-      "scope": "ip"
-    }
+    "url": "https://mon.eiger2028h2.ct.swisssign.com/"
   },
   "log_software": {
     "name": "TesseraCT",
