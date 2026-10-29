@@ -20,8 +20,6 @@ Shards are served under `ct.swisssign.com` and split into half-year intervals.
 
 Eiger accepts all roots from the CCADB repository with the Server Authentication (TLS) key usage.
 
-In addition to the CCADB entries, Eiger also accepts additional roots available in [`additional_roots`](./eiger/additional_roots) folder.
-
 #### Active Shards
 
 | Name        | Monitoring prefix                | Submission prefix                    | Interval                                    |
@@ -40,13 +38,11 @@ Our test log, named after the Eiger's little sibling, where climbers go to pract
 
 Rotstock runs in our pre-production environment, under `pre.ct.swisssign.com`. We use it to validate new software releases, network hardening and operational procedures before they reach production. Incidents are handled during CET business hours only.
 
-To get your root accepted by Rotstock, open a new issue.
-
 #### Accepted Roots
 
-Rotstock accepts roots that are not publicly trusted and that were submitted by the community.
+Rotstock accepts variout roots that that were submitted by the community.
 
-To suggest a new root, create a MR with the certificate correctly formated into the [`additional_roots`](./rotstock/additional_roots) folder.
+We’re adding root CA certificates to our test log. To have yours included, open a new issue and attach your root certificate in PEM format.
 
 #### Active Shards
 
@@ -55,14 +51,3 @@ To suggest a new root, create a MR with the certificate correctly formated into 
 | rotstock2026h2 | mon.rotstock2026h2.pre.ct.swisssign.com | log.rotstock2026h2.pre.ct.swisssign.com | 2026-07-01T00:00:00Z – 2027-01-01T00:00:00Z |
 | rotstock2027h1 | mon.rotstock2027h1.pre.ct.swisssign.com | log.rotstock2027h1.pre.ct.swisssign.com | 2027-01-01T00:00:00Z – 2027-07-01T00:00:00Z |
 | rotstock2027h2 | mon.rotstock2027h2.pre.ct.swisssign.com | log.rotstock2027h2.pre.ct.swisssign.com | 2027-07-01T00:00:00Z – 2028-01-01T00:00:00Z |
-
-
-## Building the Roots File
-
-[`build-roots.sh`](./build-roots.sh) combines every `.crt` (PEM) certificate in a folder into a single CA roots file, sorted by file name:
-
-```sh
-./build-roots.sh -in rotstock/additional_roots -out pem/rotstock-ca-roots.pem
-```
-
-Both `-in` (folder containing the `.crt` files) and `-out` (file to write) are required. The output folder is created if it doesn't exist.
