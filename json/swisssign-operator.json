@@ -2,7 +2,6 @@
   "$schema":"https://googlechrome.github.io/CertificateTransparency/operator_list_schema_v1.json",
   "operator_name":"SwissSign",
   "logs":[
-    "https://raw.githubusercontent.com/opensource-swisssign/ct-swisssign/refs/heads/main/json/eiger2026h2.json",
     "https://raw.githubusercontent.com/opensource-swisssign/ct-swisssign/refs/heads/main/json/eiger2027h1.json",
     "https://raw.githubusercontent.com/opensource-swisssign/ct-swisssign/refs/heads/main/json/eiger2027h2.json",
     "https://raw.githubusercontent.com/opensource-swisssign/ct-swisssign/refs/heads/main/json/eiger2028h1.json",
