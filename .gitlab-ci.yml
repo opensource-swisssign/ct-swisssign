@@ -1,0 +1,15 @@
+---
+
+stages:
+  - github
+
+github:
+  tags:
+    - automagic
+    - noob-shell
+  stage: github
+  script:
+    - git filter-repo --name-callback 'return b"SwissSign"' --email-callback 'return b"opensource@swisssign.com"' --force
+    - git remote add github https://github.com/opensource-swisssign/ct-swisssign.git
+    - |
+      git -c http.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" push github main
